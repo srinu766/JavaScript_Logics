@@ -1,0 +1,24 @@
+<script>
+
+    function mergeTwoLists(L1, L2){
+        var results = [];
+        
+        while(L1.length && L2.length){
+            const next = (L1[0] < L2[0]) ? L1.shift() : L2.shift();
+            results.push(next);
+        }
+        if(L1.length){
+            results = results.concat(L1);
+        }else{
+            results = results.concat(L2);
+        }
+        var sorted = results.sort((a,b)=>a-b)
+        return sorted;
+    }
+
+    
+  var  list1 = [51,100,2,4];
+  var  list2 = [1,3,4];
+  console.log(mergeTwoLists(list1, list2));
+
+</script>

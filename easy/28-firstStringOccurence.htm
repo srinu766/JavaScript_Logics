@@ -1,0 +1,14 @@
+<script>
+    function firstStrOccurence(haystack, needle){
+        for(var i=0; i<haystack.length; i++){
+            if(haystack.substr(i,needle.length) == needle){
+                return i
+            }
+        }
+        return -1
+
+    }
+  var  haystack = "psadbutsad", needle = "sad"
+  console.log(firstStrOccurence(haystack, needle));
+
+</script>

@@ -1,0 +1,32 @@
+<script>
+    function removeElements(head){
+        // var newArr = [];
+        // for(var i=0; i<arr.length; i++){
+        //     var exist = false;
+        //     for(var j=0; j<newArr.length; j++){
+        //         if(newArr[j] == arr[i]){
+        //             exist = true;
+        //             break;
+        //         }
+        //     }
+        //     if(!exist){
+        //         newArr.push(arr[i]);
+        //     }
+        // }
+        // var sortedNewArr = newArr.sort((a,b)=>a-b)
+        //   return sortedNewArr;
+
+        let curr=head;
+    while(curr !== null && curr.next !== null){
+        if(curr.val===curr.next.val){
+            curr.next=curr.next.next;
+        }
+        else{
+            curr=curr.next;
+        }
+    }
+ return head;
+    }
+    var n = [1,1,2];
+    console.log(removeElements(n))
+</script>

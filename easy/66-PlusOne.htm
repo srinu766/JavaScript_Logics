@@ -1,0 +1,15 @@
+<script>
+    function PlusOne(digits){
+        console.log(digits);
+    var joinDigits = digits.join("")
+    var addedOne =parseInt(joinDigits) + 1;
+    var myArr = String(addedOne).split("").map((num)=>{
+        return Number(num);
+    })
+    return myArr;
+    }
+
+    var digits = [1,2,3]
+    console.log(PlusOne(digits));
+
+</script>
